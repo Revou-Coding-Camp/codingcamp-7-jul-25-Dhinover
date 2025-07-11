@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.todo-app {
+  background: #2b2d42;
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.todo-app h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.todo-app h1 span {
+  color: #c084fc;
+}
+
+/* Baris input */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-row input[type="text"] {
+  flex: 2;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #3f415c;
+  color: white;
+  min-width: 0;
+}
+
+.deadline-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #3f415c;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.deadline-group label {
+  color: #e0e7ff;
+  font-size: 1.2rem;
+}
+
+.deadline-group input[type="date"] {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Tombol */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.button-row button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-row button:active {
+  transform: scale(0.97);
+}
+
+#add-btn {
+  background-color: #7c3aed;
+}
+
+#add-btn:hover {
+  background-color: #6d28d9;
+}
+
+#delete-all {
+  background-color: #f43f5e;
+}
+
+#delete-all:hover {
+  background-color: #be123c;
+}
+
+/* Telusuri Tanggal */
+.section-container {
+  margin-bottom: 25px;
+}
+
+.search-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #e0e7ff;
+}
+
+.filter-date {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #3f415c;
+  color: white;
+}
+
+/* Judul Section */
+.section-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #e0e7ff;
+  font-size: 16px;
+}
+
+/* Isi kosong */
+.empty-state {
+  background: #3f415c;
+  padding: 15px;
+  border-radius: 10px;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+/* Daftar Tugas */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  background: #3f415c;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list button {
+  background: #4f46e5;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.todo-list button:hover {
+  opacity: 0.85;
+}
+
+.todo-list button.delete-btn {
+  background-color: #f43f5e;
+}
+
+/* Status dan Countdown */
+.done {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.task-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.status {
+  font-size: 0.85em;
+  margin-top: 4px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.status.late {
+  background: #f87171;
+  color: white;
+}
+
+.status.today {
+  background: #fde047;
+  color: #1a1c2c;
+}
+
+.status.ontime {
+  background: #6ee7b7;
+  color: #1a1c2c;
+}
+
+.status.done-status {
+  background: #93c5fd;
+  color: #1a1c2c;
+}
+
+.countdown {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #facc15;
+}
